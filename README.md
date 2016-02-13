@@ -95,6 +95,7 @@ implementing some additional functionality to allow people to access other areas
 I'd like to do given the seemingly non-existent nature of good JVM based libraries for the Battle.Net API (at least from a very cursory search)
 
 So with that in mind my current list for functionality goals
+
 1. Achievement and Conquest Leaderboards
 2. The remaining D3 Apis (Items, Followers, Characters)
 3. The Starcraft Api
