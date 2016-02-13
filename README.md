@@ -1,5 +1,7 @@
 # BattleNet
 
+[![Download](https://api.bintray.com/packages/hntd187/maven/battlenet/images/download.svg) ](https://bintray.com/hntd187/maven/battlenet/_latestVersion)
+
 A  Scala Interface for the Battle.net API.
 
 Currently supports the Diablo 3 leaderboards, but hopefully adding more.
@@ -49,8 +51,10 @@ Examples
 -------
 ```scala
 // Get the Solo Barbarian Leaderboard
+import com.github.scarman.battlenet._
 import com.github.scarman.battlenet.d3.leaderboards._
 
+BattleNet.withAccessToken("<ACCESS TOKEN>")
 SeasonLeaderboard(Boards.SOLO_BARB).getPlayers.foreach{ p =>
   val paddedRank: String = p.rank.getOrElse("").padTo(4, " ").mkString
   println(f"#$paddedRank ${p.riftLevel.get}: ${p.player.head.battleTag.get} (${p.player.head.paragon.get})")
@@ -72,8 +76,10 @@ SeasonLeaderboard(Boards.SOLO_BARB).getPlayers.foreach{ p =>
 
 ```scala
 // Get the highest paragon's battle tag
+import com.github.scarman.battlenet._
 import com.github.scarman.battlenet.d3.leaderboards._
 
+BattleNet.withAccessToken("<ACCESS TOKEN>")
 val lb: SeasonLeaderboard = SeasonLeaderboard(Boards.SOLO_BARB)
 println(f"Highest Paragon(${lb.highestParagon.paragon.get}): ${lb.highestParagon.battleTag.get}")
 
