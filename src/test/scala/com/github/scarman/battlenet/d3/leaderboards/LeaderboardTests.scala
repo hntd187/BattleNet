@@ -6,7 +6,7 @@ package d3.leaderboards
   */
 object LeaderboardTests extends App {
 
-  BattleNet.withAccessToken("6qaa7q3xa4cugjj8wm5xvxzk")
+  BattleNet.withAccessToken("")
 
   // Era and Seasonal have the same interface so you can use them in the exact same
   // way and you should get similar results.
